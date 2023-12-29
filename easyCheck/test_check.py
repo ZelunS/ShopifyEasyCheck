@@ -1,6 +1,7 @@
 import pytest
 import requests
 import jsonpath
+from sendMsg import sendMsg
 
 class TestCheck:
 
@@ -46,6 +47,7 @@ class TestCheck:
         # print(status)
         for i in status:
             if i == 2:
+                sendMsg()
                 print("有折扣码异常")
             else:
                 break
